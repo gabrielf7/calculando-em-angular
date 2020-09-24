@@ -1,15 +1,57 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>CalculandoEmAngular</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body class="mat-typography">
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>CalculandoEmAngular</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body class="mat-typography">
+    <app-root></app-root>
+    
+    <script>
+      function calcIdade() {
+        var idadeAno = document.getElementById('id-calc-idade').value;
+
+        var anoAtual = new Date().getFullYear();
+        var resultado = anoAtual - idadeAno;
+
+        if(resultado) {
+          alert("Resultado:" + resultado + " anos");
+        }
+
+      }
+    </script>
+
+    <script>
+      function cotacaoDolar() {
+        var dolar = document.getElementById('id-calc-dolar').value;
+
+        var calcdolar = dolar * 5.57;
+        var resultado = calcdolar;
+
+        if(resultado) {
+          alert("Resultado: R$ " + resultado);
+        }
+
+      }
+    </script>
+
+    <script>
+      function infoDiaSemana() {
+        var dataDS = document.getElementById('id-info-data').value;
+
+        var infodata = dataDS;
+        var resultado = infodata;
+
+        if(resultado) {
+          alert("Dia da Semana: " + resultado);
+        }
+
+      }
+    </script>
+  </body>
 </html>

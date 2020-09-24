@@ -1,0 +1,13 @@
+.container-pg-center {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.mat-form-field-label {
+  color: #7b1fa2;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: rgba(255, 255, 255);
+}

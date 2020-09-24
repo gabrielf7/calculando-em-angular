@@ -5,3 +5,8 @@
 .example-button-row .mat-button-base {
   margin: 8px 8px 8px 0;
 }
+
+.textimg {
+  color: rgb(255, 255, 255);
+  padding: 20px 20px;
+}

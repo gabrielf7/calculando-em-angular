@@ -1,15 +1,23 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>Tarefas.js</span>
+  <span class="material-icons" routerLink="home">
+    <img  class="textimg" src="./../../assets/baseline_library_add_check_white_18dp.png">
+    <!-- <span class="material-icons">library_add_check</span> -->
+  </span>
+  <a routerLink="home">Tarefas.js</a>
   <span class="example-spacer"></span>
   <div class="example-button-row">
     <button mat-raised-button color="warn" routerLink="home">Home</button>
-    <button mat-raised-button color="accent" routerLink="idade">Idade</button>
-    <button mat-raised-button color="accent" routerLink="dolar">Cotação do Dolar</button>
-    <button mat-raised-button color="accent" routerLink="diadasemana">Dia da Semana</button>
-    <button mat-raised-button color="accent" routerLink="desconto">Desconto</button>
-    <button mat-raised-button color="accent" routerLink="imc">IMC</button>
+    
   </div>
+  <button mat-button [matMenuTriggerFor]="beforeMenu">
+    <!-- <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon> -->
+    <span class="material-icons">perm_data_setting</span>
+  </button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-menu-item color="accent" routerLink="idade">Calcular idade</button>
+    <button mat-menu-item color="accent" routerLink="dolar">Calcular Dolar para Real</button>
+    <button mat-menu-item color="accent" routerLink="diadasemana">Descobrir dia</button>
+    <button mat-menu-item color="accent" routerLink="desconto">Calcular Desconto</button>
+    <button mat-menu-item color="accent" routerLink="imc">Calcular IMC</button>
+  </mat-menu>
 </mat-toolbar>
