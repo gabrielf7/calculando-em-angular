@@ -119,6 +119,12 @@
               "devServerTarget": "calculando-em-angular:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/calculando-em-angular/"
+          }
         }
       }
     }
