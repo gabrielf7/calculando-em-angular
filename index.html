@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculando em Angular</title>
+    <base href="/calculando-em-angular/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.a24c4c53c8d7503fda4d.css"></head>
+  <body class="mat-typography">
+    <app-root></app-root>
+    
+    <script>
+      function calcIdade() {
+        var idadeAno = document.getElementById('id-calc-idade').value;
+
+        if((idadeAno == '') || (idadeAno < 1900)){
+        }else{
+          var anoAtual = new Date().getFullYear();
+          var resultado = anoAtual - idadeAno;
+          alert("Resultado:" + resultado + " anos");
+        }
+        
+      }
+    </script>
+
+    <script>
+      function cotacaoDolar() {
+        var dolar = document.getElementById('id-calc-dolar').value;
+        
+        if((dolar == '') || (dolar < 1)){
+        }else{
+          var calcdolar = dolar * 5.57;
+          var resultado = calcdolar;
+          
+          if(resultado) {
+            alert("Resultado: R$ " + resultado);
+          }
+        }
+      }
+    </script>
+
+    <script>
+      function infoDiaSemana() {
+        var semana = ["Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira","Sábado", "Domingo"];
+        var dia = new Date(document.getElementById("id-info-data").value);
+        if(dia == 0) {
+        }else{
+          var infodata = semana[dia.getDay()];
+          var resultado = infodata;
+          alert("Dia da Semana: " + resultado);
+        }
+      }
+    </script>
+
+    <script>
+      function infoDesconto() {
+        var valorBase = document.getElementById('id-calc-valor-base').value;
+        var percDesconto = document.getElementById('id-calc-perc-desc').value;
+
+        if(((valorBase == '') || (percDesconto == '')) || ((valorBase <= 0) || (percDesconto <= 0))) {
+        }else{
+          var infodesc = parseFloat(valorBase * (percDesconto / 100));
+          var resultado = parseFloat(valorBase) - parseFloat(infodesc);
+          alert("Desconto: R$ " + resultado);
+        }
+      }
+    </script>
+
+    <script>
+      function infoIMC() {
+        var cmaltura = document.getElementById('id-calc-altura').value;
+        var peso = document.getElementById('id-calc-peso').value;
+
+        if(((cmaltura == '') || (cmaltura < 1)) || ((peso == '') || (peso < 1))) {
+        }else{
+          mAltura = (cmaltura / 100);
+          var imc = (peso / (mAltura * mAltura)).toFixed(2);
+
+          if(imc < 18.5) {
+            alert("IMC: "+ imc +" | Classificação: Abaixo do Peso");
+          }else{ 
+            if((imc >= 18.5) && (imc <= 24.9)) {
+              alert("IMC: "+ imc +" | Classificação: Saudável");
+            }
+            if((imc >= 25.0) && (imc <= 29.9)) {
+              alert("IMC: "+ imc +" | Classificação: Peso em excesso");
+            }
+            if((imc >= 30.0) && (imc <= 34.9)) {
+              alert("IMC: "+ imc +" | Classificação: Obesidade Grau I");
+            }
+            if((imc >= 35.0) && (imc <= 39.9)) {
+              alert("IMC: "+ imc +" | Classificação: Obesidade Grau II(severa)");
+            }
+            if(imc >= 40) {
+              alert("IMC: "+ imc +" | Classificação: Obesidade Grau III(mórbida)");
+            }
+          }
+        }
+      }
+    </script>
+  <script src="runtime.acf0dec4155e77772545.js" defer></script><script src="polyfills.35a5ca1855eb057f016a.js" defer></script><script src="main.04375f071a2dd74ed438.js" defer></script></body>
+</html>
