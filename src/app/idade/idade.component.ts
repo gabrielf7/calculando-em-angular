@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-idade',
   templateUrl: './idade.component.html',
   styleUrls: ['./idade.component.css']
 })
-export class IdadeComponent implements OnInit {
+export class IdadeComponent {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
+
+  openDialog() {
+    this.dialog.open(DialogElementsExampleDialog);
+  }
 
   ngOnInit(): void {
   }
 
 }
+
+@Component({
+  selector: 'dialog-elements-example-dialog',
+  templateUrl: 'dialog-elements-example-dialog.html',
+})
+export class DialogElementsExampleDialog {}

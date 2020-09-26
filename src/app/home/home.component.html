@@ -1,21 +1,40 @@
-<!-- <div class="container-pg-center">
-  <div color="primary" class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Input</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Select</mat-label>
-      <mat-select>
-        <mat-option value="option">Option</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Textarea</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Menu das Ferramentas</p>
+    <p *ngIf="showFiller">Escolha uma para testar.</p>
+    <div><button mat-raised-button color="accent" routerLink="idade">Calcular idade</button></div>
+    <div><button mat-raised-button color="accent" routerLink="dolar">Calcular Dolar para Real</button></div>
+    <div><button mat-raised-button color="accent" routerLink="diadasemana">Descobrir dia</button></div>
+    <div><button mat-raised-button color="accent" routerLink="desconto">Calcular Desconto</button></div>
+    <div><button mat-raised-button color="accent" routerLink="imc">Calcular IMC</button></div>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Comece a Jogar!
+    </button>
   </div>
-  
+
+</mat-drawer-container>
+<!-- <div class="container-card">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+    <mat-card-content>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+
 </div> -->

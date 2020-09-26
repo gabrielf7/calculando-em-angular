@@ -1,1 +1,20 @@
-
+<div class="container-pg-center">
+  <form>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Valor Base</mat-label>
+        <input matInput class="example-right-align" type="number" min=1 id="id-calc-valor-base" name="calc-valor-base" placeholder="Informe valor base..." required>
+        <span matPrefix>R$ &nbsp;</span>
+        <!-- <span matSuffix>.00</span> -->
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="fill">
+        <mat-label>Percentual</mat-label>
+        <input matInput class="example-right-align" type="number" min=1 id="id-calc-perc-desc" name="calc-perc-desc" placeholder="Informe percentual de desconto..." required>
+        <span matPrefix>Pc&nbsp;</span>
+        <span matSuffix>%</span>
+      </mat-form-field>
+    </p>
+    <button mat-raised-button color="warn" class="right" onclick="infoDesconto()">Confirmar</button>
+  </form>
+</div>

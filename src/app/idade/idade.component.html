@@ -1,11 +1,16 @@
 <div class="container-pg-center">
   <form>
-    <h1>Descobrir Idade</h1>
-  
-    <label>Informe seu ano de nascimento</label><br/>
-    <input type="number" min=1 id="id-calc-idade" name="calc_idade" placeholder="Digite o ano de nascimento..." required>
-    <button onclick="calcIdade()">Confirmar</button>
-  
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Informe seu ano de nascimento</mat-label>
+        <input matInput type="number" min=1900 id="id-calc-idade" name="calc_idade" placeholder="Digite o ano de nascimento..." required>
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <button mat-raised-button color="warn" class="right" onclick="calcIdade()">Confirmar</button>
   </form>
-  
+
+  <!-- <button mat-button (click)="openDialog()">Launch dialog</button> -->
+
 </div>

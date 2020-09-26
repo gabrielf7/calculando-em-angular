@@ -25,6 +25,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker'; 
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { MatInputModule } from '@angular/material/input';
     MatSelectModule,
     MatSidenavModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

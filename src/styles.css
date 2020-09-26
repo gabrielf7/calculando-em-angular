@@ -3,13 +3,10 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-::-webkit-scrollbar {
-  display: none;
-}
 
-/* body {
-  background-color: #212529;
-} */
+body {
+  background-color: #adbbca;
+}
 
 .mat-option {
   color: white;
@@ -22,4 +19,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.right {
+  float: right;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
