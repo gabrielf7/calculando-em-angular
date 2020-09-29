@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="styles.a24c4c53c8d7503fda4d.css"></head>
+  <link rel="stylesheet" href="styles.62324e9f994bf1f1b6f5.css"></head>
   <body class="mat-typography">
     <app-root></app-root>
     
@@ -73,33 +73,34 @@
       function infoIMC() {
         var cmaltura = document.getElementById('id-calc-altura').value;
         var peso = document.getElementById('id-calc-peso').value;
-
-        if(((cmaltura == '') || (cmaltura < 1)) || ((peso == '') || (peso < 1))) {
+        var sex =  document.getElementById('id-radio-sex').value;
+        
+        if(((cmaltura == '') || (cmaltura < 1)) || ((peso == '') || (peso < 1)) || (sex == '')) {
         }else{
-          mAltura = (cmaltura / 100);
+          var mAltura = (cmaltura / 100);
           var imc = (peso / (mAltura * mAltura)).toFixed(2);
 
           if(imc < 18.5) {
-            alert("IMC: "+ imc +" | Classificação: Abaixo do Peso");
+            alert("Sexo: "+ sex +" IMC: "+ imc +" | Classificação: Abaixo do Peso");
           }else{ 
-            if((imc >= 18.5) && (imc <= 24.9)) {
-              alert("IMC: "+ imc +" | Classificação: Saudável");
+            if((imc >= 18.5) && (imc < 25)) {
+              alert("Sexo: "+ sex + "IMC: "+ imc +" | Classificação: Saudável");
             }
-            if((imc >= 25.0) && (imc <= 29.9)) {
-              alert("IMC: "+ imc +" | Classificação: Peso em excesso");
+            if((imc >= 25.0) && (imc < 30.0)) {
+              alert("Sexo: "+ sex + "IMC: "+ imc +" | Classificação: Peso em excesso");
             }
-            if((imc >= 30.0) && (imc <= 34.9)) {
-              alert("IMC: "+ imc +" | Classificação: Obesidade Grau I");
+            if((imc >= 30.0) && (imc < 35.0)) {
+              alert("Sexo: "+ sex + "IMC: "+ imc +" | Classificação: Obesidade Grau I");
             }
-            if((imc >= 35.0) && (imc <= 39.9)) {
-              alert("IMC: "+ imc +" | Classificação: Obesidade Grau II(severa)");
+            if((imc >= 35.0) && (imc < 40.0)) {
+              alert("Sexo: "+ sex + "IMC: "+ imc +" | Classificação: Obesidade Grau II(severa)");
             }
-            if(imc >= 40) {
-              alert("IMC: "+ imc +" | Classificação: Obesidade Grau III(mórbida)");
+            if(imc >= 40.0) {
+              alert("Sexo: "+ sex + "IMC: "+ imc +" | Classificação: Obesidade Grau III(mórbida)");
             }
           }
         }
       }
     </script>
-  <script src="runtime.acf0dec4155e77772545.js" defer></script><script src="polyfills.35a5ca1855eb057f016a.js" defer></script><script src="main.c5ef7e439c6916d12f71.js" defer></script></body>
+  <script src="runtime.acf0dec4155e77772545.js" defer></script><script src="polyfills.35a5ca1855eb057f016a.js" defer></script><script src="main.9ef66995c25ad32db11b.js" defer></script></body>
 </html>
